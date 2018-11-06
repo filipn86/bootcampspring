@@ -24,6 +24,9 @@
         <module>boot-camp-api</module>
         <module>boot-camp-consumer-api</module>
         <module>boot-camp-consumer-kafka</module>
+        <module>boot-camp-consumer-jms</module>
+        <module>boot-camp-producer-jms</module>
+        <module>boot-camp-jms-config</module>
     </modules>
     <packaging>pom</packaging>
 </project>
