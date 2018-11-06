@@ -9,32 +9,22 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>boot-camp-core</artifactId>
+    <artifactId>boot-camp-producer-jms</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>pl.coreservices</groupId>
+            <artifactId>boot-camp-producer-api</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pl.coreservices</groupId>
+            <artifactId>boot-camp-consumer-api</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pl.coreservices</groupId>
             <artifactId>boot-camp-api</artifactId>
-            <version>${parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>pl.coreservices</groupId>
-            <artifactId>boot-camp-consumer-kafka</artifactId>
-            <version>${parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>pl.coreservices</groupId>
-            <artifactId>boot-camp-producer-kafka</artifactId>
-            <version>${parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>pl.coreservices</groupId>
-            <artifactId>boot-camp-consumer-jms</artifactId>
-            <version>${parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>pl.coreservices</groupId>
-            <artifactId>boot-camp-producer-jms</artifactId>
             <version>${parent.version}</version>
         </dependency>
         <dependency>
@@ -43,17 +33,12 @@
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
+            <artifactId>spring-jms</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>27.0-jre</version>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-spring</artifactId>
+            <version>5.13.3</version>
         </dependency>
     </dependencies>
-
 </project>
