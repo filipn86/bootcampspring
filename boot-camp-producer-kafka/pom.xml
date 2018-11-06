@@ -9,22 +9,17 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>boot-camp-core</artifactId>
+    <artifactId>boot-camp-producer-kafka</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>pl.coreservices</groupId>
+            <artifactId>boot-camp-producer-api</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pl.coreservices</groupId>
             <artifactId>boot-camp-api</artifactId>
-            <version>${parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>pl.coreservices</groupId>
-            <artifactId>boot-camp-consumer-kafka</artifactId>
-            <version>${parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>pl.coreservices</groupId>
-            <artifactId>boot-camp-producer-kafka</artifactId>
             <version>${parent.version}</version>
         </dependency>
         <dependency>
@@ -32,12 +27,9 @@
             <artifactId>spring-context</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <version>2.1.7.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -45,5 +37,4 @@
             <version>27.0-jre</version>
         </dependency>
     </dependencies>
-
 </project>

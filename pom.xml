@@ -19,7 +19,11 @@
         <module>boot-camp-core</module>
         <module>boot-camp-war</module>
         <module>boot-camp-spring-boot</module>
-        <module>boot-camp-kafka-producer</module>
+        <module>boot-camp-producer-kafka</module>
+        <module>boot-camp-producer-api</module>
+        <module>boot-camp-api</module>
+        <module>boot-camp-consumer-api</module>
+        <module>boot-camp-consumer-kafka</module>
     </modules>
     <packaging>pom</packaging>
 </project>
