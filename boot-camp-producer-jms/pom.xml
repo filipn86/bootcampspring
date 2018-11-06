@@ -24,6 +24,11 @@
         </dependency>
         <dependency>
             <groupId>pl.coreservices</groupId>
+            <artifactId>boot-camp-jms-config</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pl.coreservices</groupId>
             <artifactId>boot-camp-api</artifactId>
             <version>${parent.version}</version>
         </dependency>
