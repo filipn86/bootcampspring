@@ -1,6 +1,9 @@
 package pl.coreservices.db;
 
+import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.hazelcast.core.HazelcastInstance;
+import com.hazelcast.core.IMap;
 import pl.coreservices.model.Statistic;
 
 import java.util.List;
@@ -9,23 +12,23 @@ import java.util.stream.Collectors;
 
 public class StatisticsDB {
 
-    private Map<String, Integer> statistics;
+    private IMap<String, Statistic> statistics;
 
-    public StatisticsDB() {
-        statistics = Maps.newHashMap();
+    public StatisticsDB(HazelcastInstance hazelcastInstance) {
+        statistics = hazelcastInstance.getMap("statistics");
     }
 
     public void addStatistics(Statistic statistic) {
-        statistics.putIfAbsent(statistic.getName(), 0);
-        statistics.put(statistic.getName(), statistics.get(statistic.getName())+statistic.getCount());
+        statistics.putIfAbsent(statistic.getName(), new Statistic(statistic.getName(), 0));
+        statistics.get(statistic.getName()).increaseCountBy(statistic.getCount());
     }
 
     public List<Statistic> getAllStatistics() {
-        return statistics.entrySet().stream().map( st-> new Statistic(st.getKey(), st.getValue())).collect(Collectors.toList());
+        return Lists.newArrayList(statistics.values());
     }
 
     public Statistic getStatisticByName(String name) {
-        return new Statistic(name, statistics.getOrDefault(name, 0));
+        return statistics.getOrDefault(name, new Statistic(name, 0));
     }
 
 }

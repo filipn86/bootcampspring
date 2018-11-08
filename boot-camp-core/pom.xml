@@ -54,6 +54,11 @@
             <artifactId>guava</artifactId>
             <version>27.0-jre</version>
         </dependency>
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast</artifactId>
+            <version>3.11</version>
+        </dependency>
     </dependencies>
 
 </project>

@@ -29,4 +29,8 @@ public class Statistic implements Serializable{
     public void setCount(Integer count) {
         this.count = count;
     }
+
+    public void increaseCountBy(Integer countToAdd) {
+        this.count+=countToAdd;
+    }
 }
